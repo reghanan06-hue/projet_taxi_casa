@@ -105,12 +105,12 @@ export const usePlacesStore = create<PlacesState>((set) => ({
     const pricePerKm = 3;
 
     const price = baseFare + distance * pricePerKm;
- const speed = 40; // km/h
+    const speed = 40; // km/h
   const durationMinutes = (distance / speed) * 60;
     return {
       distance: parseFloat(distance.toFixed(2)),
       price: parseFloat(price.toFixed(2)),
-      durationMn:parseFloat(price.toFixed(2)),
+      durationMn:parseFloat(durationMinutes .toFixed(2)),
     };
   },
 }));
